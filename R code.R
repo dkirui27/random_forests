@@ -1,17 +1,13 @@
 ##### THIRD PAPER ASSIGNMENT (974) ########
-setwd("~/Desktop/PhD work/Year 3/Spring 2017/STAT 974 - Modern Regression/Assignments/Assignment 3")
-load("~/Desktop/PhD work/Year 3/Spring 2017/STAT 974 - Modern Regression/Assignments/Assignment 3/admissions974.rdata")
+setwd("directory")
+load("~admissions974.rdata")
 summary(admissions)
 str(admissions)
-#detach("package:plyr", unload=TRUE)
-#detach("package:dplyr", unload=TRUE)
-#install.packages("MAPLES")
 library(plyr) #ALWAYS load plyr BEFORE dplyr
 library(dplyr)
 library(ggplot2)
 library(MAPLES)
 library(randomForest)
-#rm(admissions2)
 admissions2 <- admissions  #creating  a duplicate dataset to work with
 str(admissions2)
 dim(admissions)
@@ -24,7 +20,7 @@ admissions2$sex <- as.factor(admissions2$sex) #converting the sex variable to a 
 
 str(admissions2)
 summary(admissions2)
-#View(admissions2)
+
 
 #RELABELING ADMIT
 summary(admissions2$admit)
